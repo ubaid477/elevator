@@ -1,9 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Building from "../../componets/building/Building";
+import Building from "../../components/building/Building";
 import { Container } from "@mui/material";
-import Numberpad from "../../componets/numberPad/Numberpad";
+import Numberpad from "../../components/numberPad/Numberpad";
 
 
 
@@ -26,6 +26,8 @@ export default function HomeContainer() {
 
 
 
+
+
     React.useEffect(()=>{
         const interval = setInterval(() => {
             setCurrentFloor((floor));
@@ -45,7 +47,7 @@ export default function HomeContainer() {
             <Building floor={floor} duration = {duration} currentFloor={currentFloor} open={open}/>
           </Grid>
           <Grid item xs={4}>
-            <Numberpad onClick={onClick} current={floor} disabled={!open}/>
+            <Numberpad onClick={onClick} current={floor} />
           </Grid>
         </Grid>
       </Box>

@@ -4,7 +4,7 @@ import { styled } from "@mui/system";
 
 const StyledElevator = styled("div")(({ floor, duration }) => ({
   height: "100px",
-  background: "#e1fefe",
+  background: "red",
   position: "absolute",
   top: `${500 - floor * 100}px`,
   transition: duration < 0 ? `${-duration}ms` : `${duration}ms`,
